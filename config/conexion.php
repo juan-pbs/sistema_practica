@@ -3,12 +3,13 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/config.php';
 
-$host = '127.0.0.1';
-$dbname = 'sistemapractica';
-$username = 'root';
-$password = '';
+$host = (string)(getenv('DB_HOST') ?: '127.0.0.1');
+$port = (string)(getenv('DB_PORT') ?: '3306');
+$dbname = (string)(getenv('DB_NAME') ?: 'sistemapractica');
+$username = (string)(getenv('DB_USER') ?: 'root');
+$password = (string)(getenv('DB_PASS') ?: '');
 
-$dsn = "mysql:host={$host};dbname={$dbname};charset=utf8mb4";
+$dsn = "mysql:host={$host};port={$port};dbname={$dbname};charset=utf8mb4";
 
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,

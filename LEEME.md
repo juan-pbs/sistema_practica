@@ -10,8 +10,8 @@
 ## Instalación
 
 1. Copiar la carpeta `sistema_practica` dentro de `htdocs`.
-2. Importar el archivo `sql/sistemapractica.sql`.
-3. Verificar las credenciales en `config/conexion.php`.
+2. Crear `.env` a partir de `.env.example` y ajustar credenciales.
+3. Importar el archivo `sql/sistemapractica.sql`.
 4. Acceder desde `http://localhost/sistema_practica`.
 
 ## Entregables de base de datos
@@ -45,3 +45,19 @@
 - Panel de ventas para Vendedor (registro de salidas y actualización de stock).
 - Validaciones frontend y backend.
 - Login externo con Google OAuth.
+
+## Variables de entorno
+
+- `DB_HOST`
+- `DB_PORT`
+- `DB_NAME`
+- `DB_USER`
+- `DB_PASS`
+- `GOOGLE_CLIENT_ID`
+- `GOOGLE_CLIENT_SECRET`
+- `GOOGLE_REDIRECT_URI`
+
+## Git
+
+- `.env` está excluido en `.gitignore`.
+- Se recomienda subir únicamente `.env.example` al repositorio.
